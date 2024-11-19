@@ -1,0 +1,754 @@
+/*----------------------------------------INDEX----------------------------------------*/
+
+/* Estilo da logo */
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 200px; /* ajuste o tamanho conforme necessário */
+}
+
+/* Estilo geral do corpo */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #e0f7fa; /* Azul claro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #0097a7; /* Azul escuro */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilo dos botões de autenticação */
+.auth-buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.auth-buttons .btn {
+    background-color: #fff;
+    color: #0097a7;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.auth-buttons .btn:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Estilo do conteúdo principal */
+main {
+    padding: 20px;
+    max-width: 1200px; /* Define a largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+/* Estilo das seções */
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    color: #0097a7;
+    margin-bottom: 20px;
+}
+
+section p {
+    color: #555;
+}
+
+/* Estilo dos tratamentos */
+.treatment {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.treatment h3 {
+    color: #0097a7;
+    margin-bottom: 10px;
+}
+
+.treatment p {
+    color: #555;
+}
+
+/* Estilo dos links de ações */
+#actions .btn {
+    display: inline-block;
+    background-color: #0097a7;
+    color: #fff;
+    padding: 10px 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#actions .btn:hover {
+    background-color: #007bff;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #0097a7; /* Azul escuro */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/*----------------------------------------TRATAMENTOS----------------------------------------*/
+
+/* Estilo geral para a seção de tratamentos */
+#treatments {
+    padding: 20px;
+    background-color: #f4f4f4; /* Adiciona um fundo cinza claro para a seção */
+}
+
+/* Grid de tratamentos para duas colunas */
+.treatment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cria colunas flexíveis com largura mínima de 300px */
+    gap: 20px; /* Espaçamento entre as seções */
+    justify-content: center; /* Centraliza as seções horizontalmente */
+}
+
+/* Estilo individual para cada tratamento */
+.treatment {
+    background-color: #fff; /* Fundo branco para cada seção de tratamento */
+    border: 1px solid #007bff; /* Borda azul clara */
+    border-radius: 10px; /* Borda arredondada */
+    padding: 15px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto e a imagem */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil ao redor da seção */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transições suaves para efeitos de hover */
+}
+
+/* Efeito de hover para a seção de tratamento */
+.treatment:hover {
+    transform: scale(1.03); /* Aumenta ligeiramente o tamanho da seção ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+/* Estilo para as imagens dentro da seção de tratamentos */
+.treatment img {
+    max-width: 85%; /* Ajusta a largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border: 3px solid #007bff; /* Borda azul ao redor da imagem */
+    border-radius: 8px; /* Borda arredondada */
+    display: block; /* Garante que a margem automática funcione */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 5px; /* Adiciona espaço interno ao redor da imagem */
+    background-color: #fff; /* Fundo branco atrás da imagem */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transições suaves para efeitos de hover */
+}
+
+/* Efeito de hover para a imagem */
+.treatment img:hover {
+    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra maior ao passar o mouse */
+}
+
+/* Estilo para os títulos dentro da seção de tratamentos */
+.treatment .title {
+    font-size: 24px; /* Tamanho do título */
+    font-weight: 700; /* Peso da fonte */
+    margin: 15px 0; /* Espaçamento acima e abaixo do título */
+    color: #007bff; /* Cor azul para o título */
+    border-bottom: 3px solid #007bff; /* Linha azul abaixo do título */
+    padding-bottom: 10px; /* Espaço abaixo do título */
+}
+
+/* Estilo para a descrição dentro da seção de tratamentos */
+.treatment .description {
+    margin: 20px 0; /* Margem acima e abaixo da descrição */
+    font-size: 16px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    font-weight: 400; /* Peso da fonte */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    border: 1px solid #007bff; /* Borda azul ao redor da descrição */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 15px; /* Espaço interno */
+    background-color: #fff; /* Fundo branco */
+    transition: box-shadow 0.3s; /* Transição suave para efeito de hover */
+}
+
+/* Efeito de hover para a descrição */
+.treatment .description:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ao passar o mouse */
+}
+
+/* Estilo para os botões dentro da seção de tratamentos */
+.treatment a.button {
+    display: inline-block; /* Tamanho ajustado ao conteúdo */
+    padding: 12px 25px; /* Espaçamento interno do botão */
+    font-size: 18px; /* Tamanho da fonte */
+    color: #fff; /* Cor do texto */
+    background-color: #007bff; /* Cor de fundo azul */
+    border: 2px solid #007bff; /* Borda azul ao redor do botão */
+    border-radius: 8px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    text-align: center; /* Centraliza o texto dentro do botão */
+    text-decoration: none; /* Remove o sublinhado */
+    margin: 10px 0; /* Margem acima e abaixo do botão */
+    transition: background-color 0.3s, border-color 0.3s, transform 0.3s; /* Transições suaves para efeitos de hover */
+}
+
+/* Efeito de hover para os botões */
+.treatment a.button:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+    border-color: #0056b3; /* Cor da borda ao passar o mouse */
+    transform: scale(1.05); /* Aumenta o botão ao passar o mouse */
+}
+
+/* Estilo para o estado de foco dos botões */
+.treatment a.button:focus {
+    outline: none; /* Remove o contorno padrão */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Adiciona uma sombra azul ao redor do botão */
+}
+
+
+/*----------------------------------------DOCTORS----------------------------------------*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+}
+
+#doctors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.doctor {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.doctor img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.doctor h3 {
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+.doctor p {
+    color: #555;
+}
+
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/*----------------------------------------CONSULTA----------------------------------------*/
+/*----------------------------------------INDEX----------------------------------------*/
+
+/* Estilo geral do corpo */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #e0f7fa; /* Azul claro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #0097a7; /* Azul escuro */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilo dos botões de autenticação */
+.auth-buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.auth-buttons .btn {
+    background-color: #fff;
+    color: #0097a7;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.auth-buttons .btn:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Estilo do conteúdo principal */
+main {
+    padding: 20px;
+    max-width: 1200px; /* Define a largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+/* Estilo das seções */
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    color: #0097a7;
+    margin-bottom: 20px;
+}
+
+section p {
+    color: #555;
+}
+
+/* Estilo do formulário de consulta */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form select, form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #0097a7;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #007bff;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #0097a7; /* Azul escuro */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/*----------------------------------------CONTACT----------------------------------------*/
+
+/* Estilo da logo */
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 200px; /* ajuste o tamanho conforme necessário */
+}
+
+/* Estilo geral do corpo */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #e0f7fa; /* Azul claro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #0097a7; /* Azul escuro */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilo do conteúdo principal */
+main {
+    padding: 20px;
+    max-width: 1200px; /* Define a largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+/* Estilo das seções */
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    color: #0097a7;
+    margin-bottom: 20px;
+}
+
+section p {
+    color: #555;
+}
+
+/* Estilo do formulário de contato */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #0097a7; /* Azul escuro */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo da logo */
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 200px; /* ajuste o tamanho conforme necessário */
+}
+
+/* Estilo geral do corpo */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #e0f7fa; /* Azul claro */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Faz o corpo ocupar a altura mínima da tela */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #0097a7; /* Azul escuro */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilo do conteúdo principal */
+main {
+    flex-grow: 1; /* Faz o conteúdo principal crescer e ocupar o espaço disponível */
+    padding: 20px;
+    max-width: 1000px; /* Define a largura máxima do conteúdo */
+    margin: 20px auto; /* Centraliza o conteúdo */
+    text-align: center;
+}
+
+/* Estilo das seções */
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    color: #0097a7;
+    margin-bottom: 20px;
+}
+
+section p {
+    color: #555;
+}
+
+/* Estilo do formulário de verificação de consulta */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 20px auto;
+    gap: 15px;
+    text-align: left;
+}
+
+input, button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+input[type="text"] {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #0097a7; /* Azul escuro */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    margin-top: 20px;
+}
+
+/* Ajustes na área de resultados */
+#resultado {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+#resultado p {
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Estilo para formulários dentro de resultados */
+#resultado form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#resultado input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#resultado button {
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+#resultado button:hover {
+    background-color: #e64a19;
+}
